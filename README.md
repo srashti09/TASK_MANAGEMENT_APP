@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+Task Management App - Full Stack Developer Assignment
+Overview
+The Task Management App is a full-stack application developed using the MERN stack (MongoDB, Express.js, React.js, Node.js). This app allows users to create, edit, delete, and manage tasks with the ability to categorize tasks by priority, view their details, and track their completion status. Additionally, the app provides an analytical dashboard for visualizing task statistics, including task distribution, completion rate, and upcoming deadlines.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+1. Basic Features:
+Task Creation: Create tasks with a title, description, due date, and priority (High, Medium, Low).
+Task List: View a list of tasks with filtering and sorting options by due date and priority.
+Task Details: View the full details of a task in a separate view.
+Task Editing: Edit task details and update them in the database.
+Task Deletion: Delete tasks, which removes them from the MongoDB database.
+2. Analytical Dashboard:
+Task Distribution: A pie chart displaying the distribution of tasks based on priority levels.
+Completion Rate: A line chart showing the percentage of tasks completed over time.
+Upcoming Deadlines: A list or calendar view highlighting tasks with upcoming deadlines.
+3. Backend Development:
+RESTful API: Developed using Node.js and Express.js to handle CRUD operations for tasks.
+MongoDB Integration: Uses MongoDB to store and manage tasks, with Mongoose for schema management.
+API Endpoints:
+POST /tasks: Create a new task.
+GET /tasks: Retrieve a list of tasks with filtering and sorting options.
+GET /tasks/:id: Retrieve details of a specific task.
+PUT /tasks/:id: Update a task.
+DELETE /tasks/:id: Delete a task.
+4. Advanced Features:
+Task Completion: Mark tasks as completed, updating their status in the database.
+Task Filtering: Filter tasks by their completion status (Pending or Completed).
+Search Functionality: A search bar to filter tasks by title or description.
+Responsive Design: Ensures the app is usable on various devices.
+5. UI/UX:
+User Interface: A clean, user-friendly interface implemented with Material-UI for modern design elements.
+Validation: Forms are validated to ensure required fields are filled out when creating or editing a task.
+6. Code Quality:
+Component Structure: Frontend components are organized for maintainability and scalability.
+Backend Structure: The backend is structured with clear separation of concerns (controllers, models, services).
+Best Practices: Follows best practices for secure API development, state management (using React), and efficient database interaction.
+Installation & Setup
+Backend (API)
+Clone the repository:
 
-## Available Scripts
+bash
+Copy code
+git clone <repository_url>
+cd <project_directory>
+Install dependencies:
 
-In the project directory, you can run:
+Copy code
+npm install
+Create .env file: Add your environment variables such as the MongoDB URI:
 
-### `npm start`
+makefile
+Copy code
+MONGO_URI=<your_mongodb_connection_string>
+PORT=5000
+Start the backend server:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+sql
+Copy code
+npm start
+The backend server will run on http://localhost:5000.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Frontend (React App)
+Navigate to the client folder:
+bash
+Copy code
+cd client
+Install dependencies:
+Copy code
+npm install
+Start the frontend server:
+sql
+Copy code
+npm start
+The React app will run on http://localhost:3000.
+Folder Structure
+bash
+Copy code
+/client                    # Frontend React app
+  /src
+    /components            # React components like TaskList, TaskForm
+    /pages                 # Pages for different routes (Home, About, Dashboard)
+    /styles                # Styles for the app
+/server                    # Backend Node.js app
+  /controllers             # Handles business logic for task operations
+  /models                  # Mongoose models for tasks
+  /routes                  # Defines API routes for CRUD operations
+  /services                # Business logic to interact with database
+  app.js                   # Entry point for the backend server
+  .env                     # Environment variables for MongoDB connection, etc.
+Technologies Used
+Frontend: React.js, Material-UI
+Backend: Node.js, Express.js
+Database: MongoDB, Mongoose
+Authentication: (Optional) JWT (for future extensions)
+API: RESTful API for managing tasks
+How to Contribute
+Fork the repository and clone it locally.
+Create a feature branch (git checkout -b feature-branch).
+Make your changes and commit them (git commit -am 'Add feature').
+Push to the branch (git push origin feature-branch).
+Open a pull request with a description of your changes.
+License
+This project is licensed under the MIT License.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Conclusion
+This Task Management App provides a comprehensive solution for task tracking with features like task creation, completion tracking, and an analytical dashboard to visualize the data. The application is built using best practices of the MERN stack and is fully responsive across devices.
