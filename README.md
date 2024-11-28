@@ -44,11 +44,11 @@ Install dependencies:
 
  
 npm install
-Create .env file: Add your environment variables such as the MongoDB URI:
+Create .env file: Add my environment variables such as the MongoDB URI:
 
 makefile
  
-MONGO_URI=<your_mongodb_connection_string>
+MONGO_URI=<my_mongodb_connection_string>
 PORT=5000
 Start the backend server:
 
@@ -92,9 +92,9 @@ API: RESTful API for managing tasks
 How to Contribute
 Fork the repository and clone it locally.
 Create a feature branch (git checkout -b feature-branch).
-Make your changes and commit them (git commit -am 'Add feature').
+Make my changes and commit them (git commit -am 'Add feature').
 Push to the branch (git push origin feature-branch).
-Open a pull request with a description of your changes.
+Open a pull request with a description of my changes.
 License
 This project is licensed under the MIT License.
 
