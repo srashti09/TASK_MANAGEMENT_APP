@@ -1,4 +1,4 @@
-Task Management App - Full Stack Developer Assignment
+                                             Task Management App - Full Stack Developer Assignment
 Overview
 The Task Management App is a full-stack application developed using the MERN stack (MongoDB, Express.js, React.js, Node.js). This app allows users to create, edit, delete, and manage tasks with the ability to categorize tasks by priority, view their details, and track their completion status. Additionally, the app provides an analytical dashboard for visualizing task statistics, including task distribution, completion rate, and upcoming deadlines.
 
