@@ -11,7 +11,7 @@ const Home = () => {
             <div className="card-body">
               <h5 className="card-title">Manage Tasks</h5>
               <p className="card-text">Create and edit your tasks efficiently.</p>
-              <a href="/tasks" className="btn btn-primary">
+              <a href="/tasklist" className="btn btn-primary">
                 View Tasks
               </a>
             </div>

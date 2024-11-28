@@ -1,3 +1,4 @@
+/* Container for the dashboard */
 .dashboard-container {
     padding: 20px;
     background-color: #f9f9f9;
@@ -6,10 +7,51 @@
     margin-bottom: 20px;
 }
 
-.task-summary {
-    margin-bottom: 20px;
+/* Flexbox container for centering the "Create Task" button */
+.create-task-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Optional: Adjust top margin as needed */
 }
 
+/* Styling the button */
+.create-task-button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background color */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.create-task-button:hover {
+    background-color: #45a049; /* Darker shade of green */
+}
+
+/* Task list styles */
+.task-list {
+    margin-top: 20px;
+}
+
+/* Task item styles */
+.task-item {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Priority styling for tasks */
+.task-item p {
+    margin: 5px 0;
+}
+
+/* Flexbox for priority distribution */
 .priority-distribution {
     display: flex;
     justify-content: center;

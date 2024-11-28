@@ -1,29 +1,32 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header'; // Import Header component
-import TaskList from './components/TaskList'; // Import TaskList component
-import TaskDetail from './components/TaskDetail'; // Import TaskDetail component
-import TaskForm from './components/TaskForm'; // Import TaskForm component
-import Dashboard from './components/Dashboard'; // Import Dashboard component
-import Home from './pages/Home'; // Import Home page component
-import About from './pages/About'; // Import About page component
+import { Route, Routes } from 'react-router-dom';  // Import Routes and Route
+import Header from './components/Header';
+import Dashboard from './components/Dashboard';
+import Home from './pages/Home';
+import About from './pages/About';
+import TaskForm from './components/TaskForm';  // Add your task form for adding/editing tasks
+import './App.css';  // Make sure to import the CSS
+import UpcomingTasks from './pages/tasks';
+import TaskList from './components/TaskList';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header /> {/* Display the header */}
-      <main className="container mt-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/tasks" element={<TaskList />} /> {/* Task list route */}
-          <Route path="/tasks/:id" element={<TaskDetail />} /> {/* Task detail route */}
-          <Route path="/tasks/new" element={<TaskForm />} /> {/* Task creation route */}
-        </Routes>
-      </main>
+    <div>
+      {/* Include Header Component */}
+      <Header />
+
+      {/* Define Routes using <Routes> component */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/tasks/add" element={<TaskForm />} />
+        <Route path="/tasks/edit/:id" element={<TaskForm />} />
+        <Route path="/tasks" element={< UpcomingTasks />} />
+        <Route path="/tasklist" element={<TaskList />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

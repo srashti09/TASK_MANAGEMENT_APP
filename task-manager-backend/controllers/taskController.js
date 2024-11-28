@@ -1,15 +1,4 @@
-// controllers/taskController.js
 const Task = require('../models/TaskModel'); // Make sure to define your Task model
-
-// Get all tasks
-const getAllTasks = async (req, res) => {
-  try {
-    const tasks = await Task.find();
-    res.json(tasks);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-};
 
 // Create a new task
 const createTask = async (req, res) => {
@@ -25,6 +14,26 @@ const createTask = async (req, res) => {
     res.status(201).json(newTask);
   } catch (err) {
     res.status(400).json({ message: err.message });
+  }
+};
+
+// Get all tasks with optional filtering by status
+const getAllTasks = async (req, res) => {
+  try {
+    const { status } = req.query; // Get status from query params
+    let filter = {};
+    console.log('Received status filter:', status);
+
+    // If a status is provided in the query, filter tasks by status
+    if (status) {
+      filter.status = status;
+    }
+
+    // Fetch tasks with the filter applied
+    const tasks = await Task.find(filter);
+    res.json(tasks);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
   }
 };
 
@@ -67,4 +76,4 @@ const deleteTask = async (req, res) => {
   }
 };
 
-module.exports = { getAllTasks, createTask, getTaskById, updateTask, deleteTask };
+module.exports = { createTask, getAllTasks, getTaskById, updateTask, deleteTask };

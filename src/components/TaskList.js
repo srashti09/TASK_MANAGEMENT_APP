@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchTasks, deleteTask } from '../api'; // Import the correct functions from api.js
-
+import '../styles/TaskList.css';
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
 
