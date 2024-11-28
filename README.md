@@ -28,53 +28,49 @@ Task Filtering: Filter tasks by their completion status (Pending or Completed).
 Search Functionality: A search bar to filter tasks by title or description.
 Responsive Design: Ensures the app is usable on various devices.
 5. UI/UX:
-User Interface: A clean, user-friendly interface implemented with Material-UI for modern design elements.
+User Interface: A clean, user-friendly interface implemented with bootstrap,css for modern design elements.
 Validation: Forms are validated to ensure required fields are filled out when creating or editing a task.
 6. Code Quality:
 Component Structure: Frontend components are organized for maintainability and scalability.
 Backend Structure: The backend is structured with clear separation of concerns (controllers, models, services).
-Best Practices: Follows best practices for secure API development, state management (using React), and efficient database interaction.
+
 Installation & Setup
 Backend (API)
 Clone the repository:
-
-bash
-Copy code
+ 
 git clone <repository_url>
 cd <project_directory>
 Install dependencies:
 
-Copy code
+ 
 npm install
 Create .env file: Add your environment variables such as the MongoDB URI:
 
 makefile
-Copy code
+ 
 MONGO_URI=<your_mongodb_connection_string>
 PORT=5000
 Start the backend server:
 
-sql
-Copy code
+
+ 
 npm start
 The backend server will run on http://localhost:5000.
 
 Frontend (React App)
 Navigate to the client folder:
-bash
-Copy code
+
 cd client
 Install dependencies:
-Copy code
+
 npm install
 Start the frontend server:
-sql
-Copy code
+
+
 npm start
 The React app will run on http://localhost:3000.
 Folder Structure
-bash
-Copy code
+
 /client                    # Frontend React app
   /src
     /components            # React components like TaskList, TaskForm
@@ -84,14 +80,14 @@ Copy code
   /controllers             # Handles business logic for task operations
   /models                  # Mongoose models for tasks
   /routes                  # Defines API routes for CRUD operations
-  /services                # Business logic to interact with database
+  /config                # Business logic to interact with database
   app.js                   # Entry point for the backend server
   .env                     # Environment variables for MongoDB connection, etc.
 Technologies Used
-Frontend: React.js, Material-UI
+Frontend: React.js
 Backend: Node.js, Express.js
-Database: MongoDB, Mongoose
-Authentication: (Optional) JWT (for future extensions)
+Database: MongoDB
+
 API: RESTful API for managing tasks
 How to Contribute
 Fork the repository and clone it locally.
